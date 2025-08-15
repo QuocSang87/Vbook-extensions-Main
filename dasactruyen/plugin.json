@@ -1,14 +1,17 @@
 {
-  "name": "Dạ Sắc Truyện",
-  "author": "Grok Assistant",
-  "version": 1,
-  "source": "https://dasactruyen.xyz",
-  "regExp": "(dasactruyen\\.xyz|da-sactruyen\\.xyz)",
-  "description": "Extension đọc truyện từ Dạ Sắc Truyện",
-  "locale": "vi_VN",
-  "tag": "novel",
-  "type": "vietnamese",
-  "icon": "icon.png",
+  "metadata": {
+              "name": "Dạ Sắc Truyện",
+              "author": "Grok Assistant",
+              "version": 1,
+              "source": "https://dasactruyen.xyz",
+              "regExp": "(dasactruyen\\.xyz|da-sactruyen\\.xyz)",
+              "description": "Extension đọc truyện từ Dạ Sắc Truyện",
+              "locale": "vi_VN",
+              "tag": "novel",
+              "type": "vietnamese",
+              "icon": "icon.png",
+              "language": "javascript"
+              },
   "scripts": {
     "home": "src/home.js",
     "genre": "src/genre.js",
