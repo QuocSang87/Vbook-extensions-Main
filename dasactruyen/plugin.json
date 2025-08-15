@@ -11,11 +11,10 @@
     "type": "novel"
   },
   "script": {
-    "home": "home.js",
-    "genre": "gen.js",
-    "detail": "detail.js",
-    "search": "search.js",
-    "toc": "toc.js",
-    "chap": "chap.js"
+    "home": "home",
+    "detail": "detail",
+    "search": "search",
+    "toc": "toc",
+    "chap": "chap"
   }
 }
