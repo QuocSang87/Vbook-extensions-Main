@@ -1,17 +1,18 @@
 {
   "metadata": {
-    "name": "Hố Truyện",
-    "author": "Nhocconsr",
-    "version": 5,
-    "source": "https://hotruyen1.com",
-    "regexp": "(www.)?hotruyen1.com/truyen/[^/+]+",
-    "description": "Đọc truyện trên trang Hotruyen.com",
-    "locale": "vi-VN",
-    "language": "javascript",
+    "name": "DaSac Truyện",
+    "author": "QuocSang87",
+    "version": 1,
+    "source": "https://dasactruyen.xyz",
+    "regexp": "(www\\.)?dasactruyen\\.xyz",
+    "description": "Đọc truyện trên trang dasactruyen.xyz",
+    "locale": "vi_VN",
+    "tag": "nsfw",
     "type": "novel"
   },
   "script": {
     "home": "home.js",
+    "genre": "genre.js",
     "detail": "detail.js",
     "search": "search.js",
     "toc": "toc.js",
