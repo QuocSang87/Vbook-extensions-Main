@@ -1,16 +1,16 @@
 {
   "metadata": {
               "name": "Dạ Sắc Truyện",
-              "author": "Grok Assistant",
+              "author": "QuocSang87",
               "version": 1,
               "source": "https://dasactruyen.xyz",
               "regExp": "(dasactruyen\\.xyz|da-sactruyen\\.xyz)",
               "description": "Extension đọc truyện từ Dạ Sắc Truyện",
               "locale": "vi_VN",
-              "tag": "novel",
-              "type": "vietnamese",
+              "tag": "nsfw",
+              "type": "novel",
               "icon": "icon.png",
-              "language": "javascript"
+              "language": "VietNam"
               },
   "scripts": {
     "home": "src/home.js",
