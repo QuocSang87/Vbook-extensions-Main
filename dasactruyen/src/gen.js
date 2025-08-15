@@ -1,13 +1,23 @@
 function execute() {
     return Response.success([
         {
-            title: "Tất cả truyện",
-            input: "https://dasactruyen.xyz/",
+            title: "Harem",
+            input: "https://dasactruyen.xyz/index.php/the-loai/harem/",
             script: "genrecontent"
         },
         {
-            title: "Truyện mới",
-            input: "https://dasactruyen.xyz/",
+            title: "Cổ trang",
+            input: "https://dasactruyen.xyz/index.php/the-loai/co-trang/",
+            script: "genrecontent"
+        },
+        {
+            title: "Incest",
+            input: "https://dasactruyen.xyz/index.php/the-loai/incest/",
+            script: "genrecontent"
+        },
+        {
+            title: "Cuckold",
+            input: "https://dasactruyen.xyz/index.php/the-loai/cuckold/",
             script: "genrecontent"
         }
     ]);
