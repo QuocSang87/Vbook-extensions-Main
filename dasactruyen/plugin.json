@@ -2,7 +2,7 @@
   "metadata": {
     "name": "DaSac Truyện",
     "author": "QuocSang87",
-    "version": 2,
+    "version": 1,
     "source": "https://dasactruyen.xyz",
     "regexp": "(www\\.)?dasactruyen\\.xyz",
     "description": "Đọc truyện trên trang dasactruyen.xyz",
