@@ -1,43 +1,31 @@
 function execute(url) {
-    let response = fetch(url);
-    if (response.ok) {
-        let doc = response.html();
-        
-        // Lấy tiêu đề từ nhiều selector khả thi
-        let name = doc.select("h1.entry-title, .post-title, h1").text().trim();
-        if (!name) {
-            // Fallback: lấy từ title tag
-            name = doc.select("title").text().split(" - ")[0].trim();
-        }
-        
-        // Lấy ảnh cover
-        let cover = doc.select(".wp-post-image, .post-thumbnail img, .entry-content img").first();
-        let coverUrl = cover ? cover.attr("src") : "";
-        
-        // Lấy mô tả/nội dung
-        let description = "";
-        let contentElements = doc.select(".entry-content, .post-content").first();
-        if (contentElements) {
-            let paragraphs = contentElements.select("p");
-            if (paragraphs.size() > 0) {
-                // Lấy đoạn đầu tiên làm mô tả
-                description = paragraphs.first().text().trim();
-                if (description.length > 500) {
-                    description = description.substring(0, 500) + "...";
-                }
-            }
-        }
-        
-        return Response.success({
-            name: name || "Truyện không tên",
-            cover: coverUrl,
-            author: "Tác giả ẩn danh",
-            description: description || "Truyện dành cho người lớn trên 18 tuổi",
-            detail: description,
-            ongoing: true, // Vì có danh sách chương
-            host: "https://dasactruyen.xyz"
-        });
-    }
-    
-    return Response.error("Không thể tải thông tin truyện");
+  const response = fetch(url);
+  if (response.ok) {
+    let doc = Html.parse(response.text());
+    let name = doc.select('h1').first().text(); // Giả định tiêu đề trong h1
+    let cover = ''; // Không có cover từ phân tích
+    let author = doc.select('a[href*="/tac_gia/"]').text();
+    let description = doc.select('p').next().text(); // Giả định mô tả là p sau tiêu đề, chỉnh nếu cần
+    let detail = doc.select('td:nth-child(2)').text(); // Status từ table hoặc span
+    let ongoing = detail.includes('Đang tiến hành');
+    let genres = [];
+    doc.select('a[href*="/the_loai/"]').forEach(e => {
+      genres.push({
+        title: e.text(),
+        input: e.attr('href').split('/the_loai/')[1].replace('/', ''),
+        script: 'gen.js'
+      });
+    });
+    return Response.success({
+      name,
+      cover,
+      author,
+      description,
+      detail,
+      ongoing,
+      genres,
+      host: 'https://dasactruyen.xyz'
+    });
+  }
+  return Response.error('Không tải được chi tiết truyện');
 }

@@ -1,21 +1,20 @@
 {
-  "metadata": {
-    "name": "DaSac Truyện",
-    "author": "QuocSang87",
-    "version": 1,
-    "source": "https://dasactruyen.xyz",
-    "regexp": "(www\\.)?dasactruyen\\.xyz",
-    "description": "Đọc truyện trên trang dasactruyen.xyz",
-    "locale": "vi_VN",
-    "tag": "nsfw",
-    "type": "novel"
-  },
-  "script": {
-    "home": "home.js",
-    "genre": "genre.js",
-    "detail": "detail.js",
-    "search": "search.js",
-    "toc": "toc.js",
-    "chap": "chap.js"
+  "name": "Dạ Sắc Truyện",
+  "author": "Grok Assistant",
+  "version": 1,
+  "source": "https://dasactruyen.xyz",
+  "regExp": "(dasactruyen\\.xyz|da-sactruyen\\.xyz)",
+  "description": "Extension đọc truyện từ Dạ Sắc Truyện",
+  "locale": "vi_VN",
+  "tag": "novel",
+  "type": "vietnamese",
+  "icon": "icon.png",
+  "scripts": {
+    "home": "src/home.js",
+    "genre": "src/genre.js",
+    "detail": "src/detail.js",
+    "search": "src/search.js",
+    "toc": "src/toc.js",
+    "chap": "src/chap.js"
   }
 }
